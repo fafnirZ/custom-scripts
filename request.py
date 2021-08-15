@@ -6,10 +6,10 @@ or
 Certificates
 '''
 
-import request
-import urllib
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib.disable_warnings(InsecureRequestWarning)
+import requests
+import urllib3
+from urllib3.exceptions import InsecureRequestWarning
+urllib3.disable_warnings(InsecureRequestWarning)
 
 proxy = {
     'https': 'http://127.0.0.1:8080',
@@ -19,11 +19,12 @@ proxy = {
 #cert = ('/home/fafnir/cert/6843.pem', '/home/fafnir/cert/6843.key')
 
 '''
-GET requests 
+GET requests
 '''
 
-url = ""
-request.get(url, proxies=proxy, verify=False)
+url = "https://report.quoccabank.com/"
+response = requests.get(url, proxies=proxy, verify=False)
+print(response.text)
 
 
 '''
