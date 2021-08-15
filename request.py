@@ -22,7 +22,7 @@ proxy = {
 GET requests
 '''
 
-url = "https://report.quoccabank.com/"
+url = ""
 response = requests.get(url, proxies=proxy, verify=False)
 print(response.text)
 
