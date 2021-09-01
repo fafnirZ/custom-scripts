@@ -1,0 +1,7 @@
+# typical curl post request with 
+# from data i.e. x-www-urlencoded
+
+curl -X POST \
+    -d "User=admin"\
+    -d "Password=Password"\
+    http://localhost:8080/login
